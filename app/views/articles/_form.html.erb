@@ -1,0 +1,35 @@
+
+<%= form_with model: @article, local: true do |form| %>
+<%= render 'shared/errors', object: @article %>
+
+  <p>
+    <%= form.label :title%><br>
+    <%= form.text_field :title, placeholder:"title" %>
+  </p>
+
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text, placeholder:"detail" %>
+  </p>
+
+  <p>
+    <p><%= form.label :image %>
+    <p><%= image_tag(@article.image_url, :size => "260x180") if @article.image? %>
+    <p><%= form.file_field :image %>
+    <%= form.hidden_field :image_cache %>
+  </p>
+
+<% if @article.image? %>
+  <p>
+    <label>
+      <%= form.check_box :remove_image %>
+      Remove avatar
+    </label>
+  </p>
+<% end %>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>

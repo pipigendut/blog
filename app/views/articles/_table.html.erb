@@ -1,0 +1,26 @@
+<% @articles.each do |article| %>
+  <tr>
+    <td><%= article.title %></td>
+    <td><%= truncate article.text, length: 20 %></td>
+    <td><%= article.image %></td>
+    <% if current_user.admin? %>
+    <td><%= link_to 'Show', article_path(article.id), class: "btn btn-secondary" %></td>
+    <%else %>
+    <td><%= link_to 'Show', '#', class: "btn btn-secondary nonadmin" %></td>
+    <%end %>
+
+    <% if current_user.admin? %>
+    <td><%= link_to 'Edit', edit_article_path(article.id), class: "btn btn-secondary" %></td>
+    <%else %>
+    <td><%= link_to 'Edit', '#', class: "btn btn-secondary nonadmin" %></td>
+    <%end %>
+
+    <% if current_user.admin? %>
+    <td><%= link_to 'Destroy', article_path(article.id), class: "btn btn-secondary",
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %></td>
+    <%else %>
+    <td><%= link_to 'Destroy', '#', class: "btn btn-secondary nonadmin" %></td>
+    <%end %>
+  </tr>
+<% end %>
