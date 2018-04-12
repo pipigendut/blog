@@ -1,7 +1,7 @@
 <h1>Edit article</h1>
 <p>Hello, <%= @user %></p>
 
-<%= render 'form', post: @article %>
+<%= render :partial =>  'form', post: @article %>
 <p>
 
 <%= link_to 'Back', articles_path %>

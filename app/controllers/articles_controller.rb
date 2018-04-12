@@ -45,7 +45,7 @@ end
 def create
   @article = Article.new(article_params)
 if @article.save
-  flash[:notice] = "Article berhasil ditambah"
+    flash[:notice] = "Article berhasil ditambah"
     redirect_to articles_path
   else
     render 'new'
