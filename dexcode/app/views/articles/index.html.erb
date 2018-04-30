@@ -1,0 +1,5 @@
+<% content_for :admin do %>
+  <%= render :partial => 'layouts/navbaradmin' %>
+<% end %>
+
+<%= react_component("Index", {article: @article}) %>

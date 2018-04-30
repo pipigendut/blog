@@ -1,0 +1,23 @@
+<div class="row text-center">
+  <%= form_for(@article, local: true) do |f| %>
+		<div class"large-10 large-centered columns">
+      <%= f.label :title%><br>
+			<%= f.text_field :title, placeholder: "Project Name" %>
+		</div>
+		<div class"large-10 large-centered columns">
+			<%= f.text_area :content, placeholder: "Your project description", rows: 5 %>
+		</div>
+    <div class"large-10 large-centered columns">
+			<%= f.text_field :all_tags, placeholder: "Your project areas"%>
+		</div>
+    <div class"large-10 large-centered columns">
+      <%= f.text_field :permalink, placeholder: "Your permalink"%>
+    </div>
+    <div class"large-10 large-centered columns">
+      <%= f.text_field :state, placeholder: "your state"%>
+    </div>
+		<div class"large-10 large-centered columns">
+			<%= f.submit "Article", class: "button" %>
+		</div>
+	<% end %>
+</div>

@@ -1,0 +1,18 @@
+<%= div_for article do %>
+  <div class="container-fluid wrapper-blog">
+    <div class="title-blog"><%= article.title %></div>
+    <div class="tag-blog"> <%= raw tag_links(article.all_tags) %> |</div>
+    <p>
+      <%= truncate article.content, length: 300 %>
+    </p>
+    <div class="float-author">
+        <%= image_tag '11.jpg', :alt => "CMS",:class => "img-responsive center-image author-image" %>
+      <div class="box-author">
+      <%= article.posted_by_id %>
+      </div>
+      <p><%= time_ago_in_words(article.created_at) %></p>
+    </div>
+      <button type="button" class="btn-readmore">Read More</button>
+    <hr class="onepixel">
+  </div>
+<% end %>

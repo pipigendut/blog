@@ -1,0 +1,42 @@
+<div class="background-blog">
+  <div class="article-feed">
+    <article class="article">
+      <!-- <% tag_cloud Tag.counts, %w{css1 css2 css3 css4} do |tag, css_class| %>
+        <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+      <% end %> -->
+      <% @articles.each do |article| %>
+        <div class="container-fluid wrapper-blog">
+          <h1 class="title-blog"><%= article.title %></h1>
+            <div class="tag-blog"> <%= raw tag_links(article.all_tags) %></div>
+          <p>
+            <%= truncate article.content.html_safe, length: 300 %>
+          </p>
+          <div class="float-author">
+            <%= image_tag '11.jpg', :alt => "CMS",:class => "img-responsive center-image author-image" %>
+              <div class="box-author">
+                <%= article.user %>
+              </div>
+            <p><%= time_ago_in_words(article.created_at) %></p>
+          </div>
+            <%= link_to 'Read More', blog_path(article.permalink), class: "btn btn-default btn-readmore" %>
+          <hr class="onepixel">
+        </div>
+      <% end %>
+    </article>
+  </div>
+
+  <!-- status elements -->
+<div class="scroller-status">
+  <div class="infinite-scroll-request loader-ellips">
+    ...
+  </div>
+  <p class="infinite-scroll-last">End of content</p>
+  <p class="infinite-scroll-error">No more pages to load</p>
+</div>
+
+<!-- pagination has path -->
+<p class="pagination">
+  <a class="pagination__next" href="page2.html">Next page</a>
+</p>
+
+</div>

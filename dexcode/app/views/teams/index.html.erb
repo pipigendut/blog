@@ -1,0 +1,26 @@
+<div class="container">
+  
+  <div class="profile-header">
+    <h2>Meet Our Team</h2>
+    <p class="name">
+      We're a team of software craftsmen who love to build awesome products.<br />
+      Meet some of our awesome software engineer.
+    </p>
+  </div>
+  <div class="row">
+    <% @teams.each_with_index do |team,i| %>
+    <div class="col-md-3 col-sm-4">
+      <div class="people-profile">
+        <%= link_to image_tag(team.avatar.thumb.url, "data-content" => team.description,
+                              "rel" => "popover",
+          "data-placement" => "bottom", "data-original-title" => team.name ,
+          "data-trigger" =>"hover") %>
+        <div class="name"><%= team.name %></div>
+        <div><%= team.position %></div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+  <div class="clearfix"></div>
+</div>

@@ -1,0 +1,65 @@
+source 'https://rubygems.org'
+
+ruby '2.2.2'
+gem 'responders'
+gem 'friendly_id', '~> 5.1.0'
+gem 'foundation-rails'
+gem "foreigner"
+gem 'rails', '4.1.0'
+gem 'sass-rails', '~> 4.0.2'
+gem 'bootstrap-tagsinput-rails'
+gem 'mysql2', '0.3.21'
+
+gem 'jquery-rails'
+gem 'angularjs-rails'
+
+gem 'activerecord', '4.1.0'
+
+gem 'lorem-ipsum', '~> 0.1.1'
+
+gem "mini_magick"
+gem 'carrierwave'
+
+gem 'devise'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+
+# Fast, threaded, concurrent web server
+gem 'puma'
+gem 'foreman'
+
+# Assets pipeline
+gem 'less-rails'
+gem 'coffee-rails'
+gem 'less-rails-bootstrap'
+gem 'therubyracer', :platforms => :ruby
+gem 'uglifier'
+gem 'lodash-rails'
+gem 'react-rails', '~> 1.4.0'
+gem 'sprockets-coffee-react'
+
+# Exception notification
+gem 'exception_notification'
+gem 'slack-notifier'
+
+gem 'font-awesome-less'
+
+#reCAPTCHA
+gem 'recaptcha', require: 'recaptcha/rails'
+
+group :development do
+  gem 'letter_opener'
+  gem 'annotate'
+  gem 'quiet_assets'
+
+  # Use Capistrano for deployment
+  gem 'capistrano', '3.1.0', require: false
+  gem 'rvm1-capistrano3', require: false
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-foreman', git: 'https://github.com/dexcodeinc/capistrano-foreman.git'
+
+  gem 'pry-rails'
+  gem 'bcrypt'
+
+end

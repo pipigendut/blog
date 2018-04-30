@@ -1,0 +1,123 @@
+<% content_for :page_title do 'Contact Dexcode: Team of Development and Engineering Experts' end %>
+<% content_for :page_meta do %>
+  <meta content="Dexcode have 5 years of expertise building software and automation that empower startups and SMEs. Contact us to get a free consultation of your project." name="description" />
+<% end %>
+
+<% if request.post? && flash[:notice]%>
+
+
+<div class="section-white">
+  <div class="container">
+    <div class="row spacing-top-thank spacing-bottom-extra">
+      <div class="col-md-12">
+        <h1 class="text-center title">
+          Request Submitted Successfully
+        </h1>
+      </div>
+      <div class="col-md-12 spacing-bottom">
+        <div class="line-orange"></div>
+      </div>
+      <div class=" col-md-12 col-xs-12 spacing-bottom centered">
+        <p class="subtitle">Thank you for contacting Dexcode. We are working to get a response to your e-mail soon.
+        </p>
+      </div>
+  <div class=" col-md-12 col-xs-12 centered">
+          <a href="<%= root_path %>">
+          <div class="btn btn-title">
+            BACK TO HOME
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<% else %>
+
+
+<div class="section-light-gray">
+  <div class="container">
+    <div class="row spacing-top-extra spacing-bottom">
+      <div class="col-md-12 ">
+        <h1 class="text-center title">
+          Contact Us
+        </h1>
+      </div>
+      <div class="col-md-12 spacing-bottom">
+        <div class="line-orange"></div>
+      </div>
+
+      <div class="col-md-12 col-xs-12">
+            <div class="contact-form clearfix">
+
+
+              <form method="POST" action="/contact_us" class="pull-left">
+                  <label>Name</label>
+                  <div class="contact-form">
+                    <input name="name" type="text" placeholder="Your name" required>
+                  </div>
+
+
+                  <label>Email</label>
+                  <div class="contact-form">
+                    <input name="email" type="email" placeholder="Your email" required>
+                  </div>
+
+
+                  <label>Subject</label>
+                  <div class="contact-form">
+                    <input name="subject" type="text" placeholder="Your purpose" required>
+                  </div>
+
+
+                  <label>Description</label>
+                  <div class="contact-form">
+                    <textarea name="description" placeholder="Briefly describe your project or let us know how we can help you." required></textarea>
+                  </div>
+
+                  <div class="captcha">
+                  <%= recaptcha_tags %>
+
+
+                  <% if request.post? && !flash[:notice] %>
+                    <div class="notice"><%= "Incorrect reCAPTCHA" %></div>
+                  <% end %>
+
+                  </div>
+
+                  <div class="controls">
+                    <input type="submit" class="btn-submit" value="Submit">
+                  </div>
+
+
+
+              </form>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        </div>
+
+    </div>
+
+    <% if !flash[:notice] %>
+
+
+      <div class="vertical-center">
+        <div class= "col-md-12 col-sm-12 col-xs-12">
+        <div class="row remove-bottom-spacing">
+
+            <iframe width="100%" height="397" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" src="https://maps.google.com/?source=friendlink&ms?msa=0&msid=208956788003890780006.0004cbb13e8e1e1f490d5&hl=en&ie=UTF8&z=15&q=Dexcode&spn=0,0&t=m&output=embed"></iframe><br>
+
+    </div>
+
+
+
+        </div>
+      </div>
+        <% end %>

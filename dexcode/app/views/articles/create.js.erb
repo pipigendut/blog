@@ -1,0 +1,4 @@
+var new_project = $("<%= escape_javascript(render(partial: @article))%>").hide();
+$('#articles').prepend(new_project);
+$('#article_<%= @article.id %>').fadeIn('slow');
+$('#new_project')[0].reset();

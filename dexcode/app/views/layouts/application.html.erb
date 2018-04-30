@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= content_for?(:page_title) ? yield(:page_title) : 'Ruby on Rails Outsourcing and Development Company | Dexcode' %></title>
+  <% if content_for?(:page_meta) %>
+    <%= yield(:page_meta) %>
+  <% else %>
+    <meta content="Dexcode is one the best Ruby on Rails and NodeJS Outsourcing and Development Company in Indonesia. Start developing your product now and get free 2 weeks trial." name="description" />
+    <meta content="ruby on rails, ruby on rails outsourcing, ruby on rails development, ruby on rails outsourcing indonesia, ruby on rails development indonesia, ruby on rails services, ruby on rails services indonesia, nodejs, nodejs outsourcing, nodejs development, nodejs outsourcing indonesia, nodejs development indonesia, nodejs services, nodejs services indonesia, sofware testing, software testing indonesia, react, react javascript, react native, react native service, react native service indonesia, react native development, react native development indonesia, mobile development, mobile development indonesia" name="keywords" />
+  <% end %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <%= favicon_link_tag 'favicon.ico' %>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "vendor/modernizr" %>
+  <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" >
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet"> -->
+
+  <style>
+    <%= Rails.application.assets.find_asset('inline') %>
+  </style>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <noscript>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+  </noscript>
+</head>
+<body id="body">
+  <% if content_for?(:admin) %>
+    <%= yield(:admin) %>
+  <%else %>
+    <%= render :partial => 'layouts/navbar' %>
+  <% end %>
+
+
+
+  <div class="main-content">
+    <%= yield %>
+  </div>
+
+
+  <% if content_for?(:admin) %>
+
+  <%else %>
+    <footer id="div2" class="footer">
+      <div class="container">
+        <div class="row spacing-top">
+          <div class="col-md-12">
+          <div class="col-md-3 col-sm-3 col-xs-12 footer-center">
+            <div class="footer-title">SERVICES</div>
+            <div>
+              <a href="/ruby-on-rails-development" class="btn-footer">
+                Ruby on Rails
+              </a>
+            </div>
+            <div>
+              <a href="/react-native-development" class="btn-footer">
+                React Native
+              </a>
+            </div>
+            <div>
+              <a href="/react-development" class="btn-footer">
+                React
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-3 col-xs-12 footer-center">
+            <div class="footer-title">ABOUT US
+  </div>
+  <div>
+            <a href="<%= about_path %>" class="btn-footer">
+
+                Profile
+                </a>
+  </div>
+
+          <div>  <a href="<%= careers_path %>" class="btn-footer">
+
+                Careers</a>
+  </div>
+
+          <div>  <a href="https://blog.dexcode.com" class="btn-footer">
+
+                Blog</a>
+  </div>
+
+          <div>  <a href="<%= people_path %>" class="btn-footer">
+
+                People</a>
+
+
+
+          </div></div>
+
+          <div class="col-md-3 col-sm-3 col-xs-12 footer-center">
+            <div class="footer-title">MAIN OFFICE
+  </div>
+
+
+
+                Jl. Kelapa Hybrida Raya QG10 / 37
+                <br>
+                Kelapa Gading, Jakarta Utara
+                <br>
+                Indonesia
+                <br>
+                E-mail: <a class="email" href="mailto:contact@dexcode.com">contact@dexcode.com</a>
+                <br>
+                Phone: +62 21 4584 8687
+                <br>
+                Cell: +62 818 0674 2317
+
+
+          </div>
+
+
+          <div class="col-md-3 col-sm-3 col-xs-12 footer-center">
+            <div class="footer-title">CONNECT
+  </div>
+            <a target="_blank"href="https://www.facebook.com/dexcodeinc"><i class="fa fa-facebook"></i></a>
+            <a target="_blank" href="https://twitter.com/dexcodeinc"><i class="fa fa-twitter"></i></a>
+            <a target="_blank" href="https://plus.google.com/108163500354525897183"><i class="fa fa-google-plus"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/company/dexcode"><i class="fa fa-linkedin"></i></a>
+            <a target="_blank" href="https://github.com/dexcodeinc"><i class="fa fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+
+    <div class="container">
+    <div class="row spacing-bottom">
+      <div class="col-md-12 col-xs-12 footer-center footer-padding copyright">
+        ©2012 - 2018 Dexcode, inc.
+      </div>
+
+  </div>
+  </div>
+  </footer>
+<% end %>
+
+
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <script type='text/javascript'>
+    function loadCSS() {
+      var css = document.createElement('link')
+      css.rel = 'stylesheet'
+      css.href = '<%= stylesheet_path "application" %>'
+      css.type = 'text/css'
+      document.head.appendChild(css)
+    }
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+              webkitRequestAnimationFrame || msRequestAnimationFrame
+    if (raf) {
+      raf(loadCSS)
+    } else {
+      window.addEventListener('load', loadCSS)
+    }
+  </script>
+  <%= render 'layouts/ga_script' %>
+  <%= javascript_include_tag "application", async: false %>
+</body>
+</html>

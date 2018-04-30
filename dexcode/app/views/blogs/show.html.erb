@@ -1,0 +1,49 @@
+
+<div class="background-blog">
+  <div class="container-fluid wrapper-blog">
+    <h1 class="title-show-blog"><%= @article.title %></h1>
+    <div class="float-author">
+        <%= image_tag '11.jpg', :alt => "CMS",:class => "img-responsive center-image author-image" %>
+      <div class="box-author">
+      <%= @article.posted_by_id %>
+      </div>
+      <p><%= time_ago_in_words(@article.created_at) %></p>
+    </div>
+    <p class="blog-content">
+    <%= @article.content.html_safe %>
+    </p>
+    <div class="tag-blog">  <%= raw tag_links(@article.all_tags) %></div>
+  </div>
+</div>
+
+<div class="background-blue">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <h1 class="text-center text-other-article">
+      Other Articles
+    </h1>
+    <div class="col-md-12">
+      <div class="line-orange"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <% @articlelimit.each do |article| %>
+      <div class="col-md-5 center-box-order-article">
+        <a href="<%= article.id %>">
+        <div class= "box-order-article">
+        <h4 class= "title-backends"><b><%= article.title %></b></h4>
+        <div class="float-author">
+            <%= image_tag '11.jpg', :alt => "CMS",:class => "img-responsive center-image author-image" %>
+          <div class="box-author">
+          <%= article.posted_by_id%>
+          </div>
+          <p><%= time_ago_in_words(article.created_at) %></p>
+        </div>
+        </div>
+      </a>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

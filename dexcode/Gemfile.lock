@@ -1,0 +1,275 @@
+GIT
+  remote: https://github.com/dexcodeinc/capistrano-foreman.git
+  revision: cdd79afc209ecdfac6b3a7a7e32eae25c914ae25
+  specs:
+    capistrano3-foreman (0.2.5)
+      capistrano (~> 3.0)
+      sshkit (>= 1.2.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    actionmailer (4.1.0)
+      actionpack (= 4.1.0)
+      actionview (= 4.1.0)
+      mail (~> 2.5.4)
+    actionpack (4.1.0)
+      actionview (= 4.1.0)
+      activesupport (= 4.1.0)
+      rack (~> 1.5.2)
+      rack-test (~> 0.6.2)
+    actionview (4.1.0)
+      activesupport (= 4.1.0)
+      builder (~> 3.1)
+      erubis (~> 2.7.0)
+    activemodel (4.1.0)
+      activesupport (= 4.1.0)
+      builder (~> 3.1)
+    activerecord (4.1.0)
+      activemodel (= 4.1.0)
+      activesupport (= 4.1.0)
+      arel (~> 5.0.0)
+    activesupport (4.1.0)
+      i18n (~> 0.6, >= 0.6.9)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.1)
+      tzinfo (~> 1.1)
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
+    angularjs-rails (1.6.8)
+    annotate (2.7.2)
+      activerecord (>= 3.2, < 6.0)
+      rake (>= 10.4, < 13.0)
+    arel (5.0.1.20140414130214)
+    babel-source (5.8.35)
+    babel-transpiler (0.7.0)
+      babel-source (>= 4.0, < 6)
+      execjs (~> 2.0)
+    bcrypt (3.1.11)
+    bootstrap-tagsinput-rails (0.4.2.1)
+      railties (>= 3.1)
+    builder (3.2.3)
+    capistrano (3.1.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (~> 1.3)
+    capistrano-bundler (1.3.0)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2)
+    capistrano-rails (1.3.1)
+      capistrano (~> 3.1)
+      capistrano-bundler (~> 1.1)
+    carrierwave (1.2.2)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
+    coderay (1.1.2)
+    coffee-rails (4.2.2)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0)
+    coffee-react (4.0.1)
+      execjs
+    coffee-script (2.4.1)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.12.2)
+    commonjs (0.2.7)
+    concurrent-ruby (1.0.5)
+    connection_pool (2.2.1)
+    devise (4.4.3)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 6.0)
+      responders
+      warden (~> 1.2.3)
+    erubis (2.7.0)
+    exception_notification (4.2.2)
+      actionmailer (>= 4.0, < 6)
+      activesupport (>= 4.0, < 6)
+    execjs (2.7.0)
+    font-awesome-less (4.7.0)
+      less (>= 2.4.0)
+    foreigner (1.7.4)
+      activerecord (>= 3.0.0)
+    foreman (0.84.0)
+      thor (~> 0.19.1)
+    foundation-rails (5.5.0.0)
+      railties (>= 3.1.0)
+      sass (>= 3.2.0, < 3.4)
+    friendly_id (5.1.0)
+      activerecord (>= 4.0.0)
+    hike (1.2.3)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
+    jquery-rails (3.1.4)
+      railties (>= 3.0, < 5.0)
+      thor (>= 0.14, < 2.0)
+    json (1.8.6)
+    launchy (2.4.3)
+      addressable (~> 2.3)
+    less (2.6.0)
+      commonjs (~> 0.2.7)
+    less-rails (2.8.0)
+      actionpack (>= 4.0)
+      less (~> 2.6.0)
+      sprockets (> 2, < 4)
+      tilt
+    less-rails-bootstrap (3.3.5.0)
+      less-rails (>= 2.6, <= 2.8)
+    letter_opener (1.6.0)
+      launchy (~> 2.2)
+    libv8 (3.16.14.19)
+    lodash-rails (4.17.5)
+      railties (>= 3.1)
+    lorem-ipsum (0.1.1)
+    mail (2.5.5)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    method_source (0.9.0)
+    mime-types (1.25.1)
+    mini_magick (4.8.0)
+    minitest (5.11.3)
+    multi_json (1.13.1)
+    mysql2 (0.3.21)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (4.2.0)
+    orm_adapter (0.5.0)
+    polyglot (0.3.5)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    pry-rails (0.3.6)
+      pry (>= 0.10.4)
+    public_suffix (3.0.2)
+    puma (3.11.4)
+    quiet_assets (1.1.0)
+      railties (>= 3.1, < 5.0)
+    rack (1.5.5)
+    rack-test (0.6.3)
+      rack (>= 1.0)
+    rails (4.1.0)
+      actionmailer (= 4.1.0)
+      actionpack (= 4.1.0)
+      actionview (= 4.1.0)
+      activemodel (= 4.1.0)
+      activerecord (= 4.1.0)
+      activesupport (= 4.1.0)
+      bundler (>= 1.3.0, < 2.0)
+      railties (= 4.1.0)
+      sprockets-rails (~> 2.0)
+    railties (4.1.0)
+      actionpack (= 4.1.0)
+      activesupport (= 4.1.0)
+      rake (>= 0.8.7)
+      thor (>= 0.18.1, < 2.0)
+    rake (12.3.1)
+    react-rails (1.4.2)
+      babel-transpiler (>= 0.7.0)
+      coffee-script-source (~> 1.8)
+      connection_pool
+      execjs
+      rails (>= 3.2)
+      tilt
+    recaptcha (4.8.0)
+      json
+    ref (2.0.0)
+    responders (1.1.2)
+      railties (>= 3.2, < 4.2)
+    rvm1-capistrano3 (1.4.0)
+      capistrano (~> 3.0)
+      sshkit (>= 1.2)
+    sass (3.2.19)
+    sass-rails (4.0.5)
+      railties (>= 4.0.0, < 5.0)
+      sass (~> 3.2.2)
+      sprockets (~> 2.8, < 3.0)
+      sprockets-rails (~> 2.0)
+    slack-notifier (2.3.2)
+    sprockets (2.12.4)
+      hike (~> 1.2)
+      multi_json (~> 1.0)
+      rack (~> 1.0)
+      tilt (~> 1.1, != 1.3.0)
+    sprockets-coffee-react (4.0.1)
+      coffee-react (>= 3.4.0)
+      coffee-script
+      sprockets
+      tilt
+    sprockets-rails (2.3.3)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      sprockets (>= 2.8, < 4.0)
+    sshkit (1.16.0)
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
+    therubyracer (0.12.3)
+      libv8 (~> 3.16.14.15)
+      ref
+    thor (0.19.4)
+    thread_safe (0.3.6)
+    tilt (1.4.1)
+    treetop (1.4.15)
+      polyglot
+      polyglot (>= 0.3.1)
+    tzinfo (1.2.5)
+      thread_safe (~> 0.1)
+    uglifier (4.1.9)
+      execjs (>= 0.3.0, < 3)
+    warden (1.2.7)
+      rack (>= 1.0)
+    wicked_pdf (1.1.0)
+    wkhtmltopdf-binary (0.12.3.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activerecord (= 4.1.0)
+  angularjs-rails
+  annotate
+  bcrypt
+  bootstrap-tagsinput-rails
+  capistrano (= 3.1.0)
+  capistrano-bundler
+  capistrano-rails
+  capistrano3-foreman!
+  carrierwave
+  coffee-rails
+  devise
+  exception_notification
+  font-awesome-less
+  foreigner
+  foreman
+  foundation-rails
+  friendly_id (~> 5.1.0)
+  jquery-rails
+  less-rails
+  less-rails-bootstrap
+  letter_opener
+  lodash-rails
+  lorem-ipsum (~> 0.1.1)
+  mini_magick
+  mysql2 (= 0.3.21)
+  pry-rails
+  puma
+  quiet_assets
+  rails (= 4.1.0)
+  react-rails (~> 1.4.0)
+  recaptcha
+  responders
+  rvm1-capistrano3
+  sass-rails (~> 4.0.2)
+  slack-notifier
+  sprockets-coffee-react
+  therubyracer
+  uglifier
+  wicked_pdf
+  wkhtmltopdf-binary
+
+RUBY VERSION
+   ruby 2.2.2p95
+
+BUNDLED WITH
+   1.14.6

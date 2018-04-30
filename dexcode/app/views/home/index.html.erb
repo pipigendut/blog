@@ -1,0 +1,146 @@
+
+
+<div class="hero-home">
+  <div class="container vertical-center-home overlay">
+    <div class="row spacing-title">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+        <h1>
+          Ruby on Rails and NodeJS Development
+        </h1>
+        <p>
+          Dexcode is a leading Ruby on Rails and NodeJS development company in Indonesia. Offering Ruby on Rails and NodeJS outsourcing and custom software development.
+        </p>
+        <a href="<%= case_studies_path %>">
+          <div class="btn btn-title">
+            SEE OUR WORKS
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-ind icon-downarrow scroll-down" rel="#scrolling"></div>
+  </div>
+</div>
+<div class="section-gray" id="scrolling">
+  <div class="container">
+    <div class="row double-spacing">
+      <div class="col-md-12 ">
+        <h1 class="text-center title">
+          Services
+        </h1>
+      </div>
+      <div class="col-md-12 spacing-bottom">
+        <div class="line-orange"></div>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <div class="box">
+          <div class="ico-holder">
+          <%= image_tag 'web-development2.png', :alt => "web development", :width => 120 %>
+
+          </div>
+          <h3>
+            Web Development
+          </h3>
+          <p class="subtitle">
+            Whether you are a startup or an existing business, we are experienced in delivering cloud-based software that are user friendly, elegant, and reliable.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <div class="box">
+          <div class="ico-holder">
+            <%= image_tag 'mobile-development2.png', :alt => "mobile development", :width => 120 %>
+          </div>
+          <h3>
+            Mobile Development
+          </h3>
+          <p class='subtitle'>
+            Mobile device usages has surpassed desktop usages in 2016. Reach your customer more effectively with
+            mobile web or native Android / iOS application development.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <div class="box">
+          <div class="ico-holder">
+            <%= image_tag 'software-testing2.png', :alt => "software testing", :width => 120 %>
+          </div>
+          <h3>
+            Software Testing
+          </h3>
+          <p class='subtitle'>
+            Tested software contains less bug and has less chances of operational failure. We offer unit
+            testing, integration testing, and continuous integration.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section-light-gray">
+  <div class="container">
+    <div class="row double-spacing">
+      <div class="col-md-12">
+        <h1 class="text-center title">
+          Our Clients
+        </h1>
+      </div>
+      <div class="col-md-12 spacing-bottom">
+        <div class="line-orange"></div>
+      </div>
+      <div class=" col-md-12">
+        <div class="centered spacing">
+            <%= image_tag 'clients/nbc-universal.png', alt: "NBC Universal", class: "client" %>
+            <%= image_tag 'clients/lens-culture.png', alt: "LensCulture", class: "client" %>
+            <%= image_tag 'clients/hilario.png', alt: "Hilario", class: "client" %>
+            <%= image_tag 'clients/savsale.png', alt: "SavSale", class: "client" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section-gray">
+  <div class="container">
+    <div class="row double-spacing">
+      <div class="col-md-12">
+        <h1 class="text-center title">
+          What Our Client Say
+        </h1>
+      </div>
+      <div class="col-md-12 spacing-bottom">
+        <div class="line-orange"></div>
+      </div>
+      <div class="col-md-6 col-xs-12 text-center">
+        <blockquote>
+          <p>
+            "Armin is a very smart (UC Berkeley EECS degree), highly reliable developer
+            who can deliver quality, agile development services cost-effectively. He
+            was the primary developer for two major projects from the very beginning,
+            developing the majority of the code base in both cases. I was impressed
+            with his ability to always find a solution and deliver results on time,
+            even under pressure. Finally, he is very current on modern frameworks and
+            process and has excellent communication skills. I highly recommend Armin
+            and will gladly provide references."
+          </p>
+          <footer>
+             Kamran Mohsenin - CEO of <a href="https://lensculture.com">LensCulture</a>
+          </footer>
+        </blockquote>
+
+      </div>
+
+      <div class="col-md-6 col-xs-12 text-center spacing-top">
+        <blockquote>
+          <p>
+            "Dexcode is the kind of company that you'll want to work with for years.  Not only do they do good work, but they are good communicators and have integrity."
+          </p>
+          <footer>
+            Ken - CEO of a Real Estate Startup
+          </footer>
+        </blockquote>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<%= render 'home/free_trial', section_class: 'section-light-gray' %>

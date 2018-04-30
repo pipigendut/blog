@@ -1,0 +1,31 @@
+
+ <nav class="navbar<%= ' navbar-scroll navbar-transparent' if request.url == root_url %> navbar-default navbar-fixed-top">
+   <div class="container">
+     <div class="navbar-header option-brand">
+       <a href="<%= root_path %>" class="navbar-brand">
+         <%= image_tag 'logo2.png', :alt => "Dexcode logo", :width => 160 %>
+       </a>
+       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </button>
+     </div>
+     <div class="navbar-collapse collapse" id="navbar-main">
+       <ul class="nav navbar-nav navbar-right">
+         <li>
+           <a href="<%= blogs_path %>">
+             <div class="option">
+               BLOG
+             </div>
+           </a>
+         </li>
+         <li>
+            <div class="logout_style">
+               <%= link_to 'LOGOUT', destroy_user_session_path, class: "option", method: :delete%>
+             </div>
+         </li>
+       </ul>
+     </div>
+   </div>
+ </nav>
